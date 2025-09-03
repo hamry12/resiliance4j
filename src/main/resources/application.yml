@@ -1,3 +1,5 @@
+server:
+  port: 8082
 management:
   health:
     circuitbreakers:
@@ -13,7 +15,7 @@ management:
 resilience4j:
   circuitbreaker:
     instances:
-      discountService:
+      catalogServiceImpl:
         registerHealthIndicator: true
         eventConsumerBufferSize: 10
         slidingWindowType: COUNT_BASED
